@@ -14,6 +14,7 @@ import logging
 ##################### Configuration Begin ######################
 YOUR_QUESTION = os.environ.get("YOUR_QUESTION", "<RANDOM_SUM>")
 YOUR_ANSWER = os.environ.get("YOUR_ANSWER", "<RANDOM_SUM>")
+TELEGRAM_DB_PASSWORD = os.environ.get("TELEGRAM_DB_PASSWORD")
 TELEGRAM_API_ID = os.environ.get("TELEGRAM_API_ID") # Get api_id and api_hash at my.telegram.org
 TELEGRAM_API_HASH = os.environ.get("TELEGRAM_API_HASH")
 TELEGRAM_PHONE = os.environ.get("TELEGRAM_PHONE") # Phone number in International Format. Example: '+8617719890604'
@@ -46,8 +47,8 @@ tg = Telegram(
     api_id=TELEGRAM_API_ID,
     api_hash=TELEGRAM_API_HASH,
     phone=TELEGRAM_PHONE,
-    database_encryption_key='any_password',
-    files_directory='tdlib_files/',
+    database_encryption_key=TELEGRAM_DB_PASSWORD,
+    files_directory='/tmp/tdlib_files/',
 )
 
 datastore_client = datastore.Client(project=GAE_PROJECT)
