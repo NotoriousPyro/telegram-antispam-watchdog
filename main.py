@@ -156,7 +156,7 @@ def new_message_handler(update):
             tg.send_message(chat_id=chat_id, text=msg_whitelisted)
         return
 
-    logging.debug("Received a new private chat message which needs verification, chat_id=", chat_id)
+    logging.info("Received a new private chat message which needs verification, chat_id=", chat_id)
 
     # Mark as read to suppress the notification.
     mark_msg_read(chat_id, msg_id)
