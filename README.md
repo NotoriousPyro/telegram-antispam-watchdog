@@ -41,6 +41,7 @@ These will be saved in Google Datastore.
     * `TELEGRAM_API_HASH` and `TELEGRAM_API_ID` are obtainable from [obtaining-api-id](https://core.telegram.org/api/obtaining_api_id#obtaining-api-id).
     * `TELEGRAM_DB_PASSWORD` should be a password, preferably using a password generator.
     * `TELEGRAM_PHONE` should be the phone number associated to your Telegram account.
+    
     (optional) Specify your own question/answer:
     * `YOUR_QUESTION`
     * `YOUR_ANSWER`
