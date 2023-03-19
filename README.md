@@ -30,7 +30,7 @@ These will be saved in Google Datastore.
     ```
 5. Clone:
     ```bash
-    git clone https://github.com/NotoriousPyro/telegram-antispam.git
+    git clone https://github.com/NotoriousPyro/telegram-antispam-watchdog.git
     ```
 6. Install prereqs:
     ```bash
@@ -41,6 +41,9 @@ These will be saved in Google Datastore.
     * `TELEGRAM_API_HASH` and `TELEGRAM_API_ID` are obtainable from [obtaining-api-id](https://core.telegram.org/api/obtaining_api_id#obtaining-api-id).
     * `TELEGRAM_DB_PASSWORD` should be a password, preferably using a password generator.
     * `TELEGRAM_PHONE` should be the phone number associated to your Telegram account.
+    (optional) Specify your own question/answer:
+    * `YOUR_QUESTION`
+    * `YOUR_ANSWER`
 8. (first run) Do the following to run it interactively to start, as you'll need to input a PIN (check Telegram):
     1. Copy the lines from `config.env` and add `export` to the start of them, and then run them.
     2. Run `python3 -m main.py`
