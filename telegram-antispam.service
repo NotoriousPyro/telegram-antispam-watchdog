@@ -1,0 +1,13 @@
+[Unit]
+Description=Telegram antispam service
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/python3 /home/craigcrawford1988/telegram-antispam-watchdog-appengine/main.py
+EnvironmentFile=/home/craigcrawford1988/telegram-antispam-watchdog-appengine/config.env
+User=craigcrawford1988
+
+[Install]
+WantedBy=multi-user.target
