@@ -37,11 +37,10 @@ These will be saved in Google Datastore.
     python3 -m pip install -r requirements.txt
     ```
 7. Copy `config.env.example` to `config.env` and edit the parameters:
-    * `GCP_PROJECT_ID` - this is visible in the URL of your gcloud project.
     * `TELEGRAM_API_HASH` and `TELEGRAM_API_ID` are obtainable from [obtaining-api-id](https://core.telegram.org/api/obtaining_api_id#obtaining-api-id).
     * `TELEGRAM_DB_PASSWORD` should be a password, preferably using a password generator.
     * `TELEGRAM_PHONE` should be the phone number associated to your Telegram account.
-    
+
     (optional) Specify your own question/answer:
     * `YOUR_QUESTION`
     * `YOUR_ANSWER`

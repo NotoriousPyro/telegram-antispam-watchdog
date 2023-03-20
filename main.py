@@ -19,7 +19,6 @@ TELEGRAM_DB_PASSWORD = os.environ.get("TELEGRAM_DB_PASSWORD")
 TELEGRAM_API_ID = os.environ.get("TELEGRAM_API_ID") # Get api_id and api_hash at my.telegram.org
 TELEGRAM_API_HASH = os.environ.get("TELEGRAM_API_HASH")
 TELEGRAM_PHONE = os.environ.get("TELEGRAM_PHONE") # Phone number in International Format. Example: '+8617719890604'
-GCP_PROJECT_ID = os.environ.get("GCP_PROJECT_ID")
 ##################### Configuration End ########################
 
 logger = gcloud_logger.Client()
@@ -53,7 +52,7 @@ tg = Telegram(
     files_directory='/tmp/tdlib_files/',
 )
 
-datastore_client = datastore.Client(project=GCP_PROJECT_ID)
+datastore_client = datastore.Client()
 task_key = datastore_client.key("telegram-watchdog", "whitelist")
 
 # Prepares the new entity
